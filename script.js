@@ -39,5 +39,22 @@ function operate(firstNum,secondNum,operator){
     }
 }
 
+const display = document.querySelector('#display')
+
+const numBtns = document.querySelectorAll(".number")
+
+let displayText = ""
+
+numBtns.forEach( btn => {
+    btn.addEventListener('click', (e) => {
+        const numValue = e.target.textContent;
+        displayText += numValue
+        display.value = displayText  
+    })
+})
+
+ 
+
+
 
 
