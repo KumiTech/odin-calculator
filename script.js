@@ -75,7 +75,7 @@ updateDisplay("0")
 
 }
 function deleteNum(){
-    if(display.value.length > 1){
+    if(display.value.length > 0){
         const result =  display.value.slice(0,-1)
        return  updateDisplay(result)
     }
