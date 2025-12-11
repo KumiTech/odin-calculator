@@ -43,6 +43,7 @@ const numBtns = document.querySelectorAll(".number")
 const operatorBtns = document.querySelectorAll(".operator")
 const equalBtn = document.querySelector(".equals")
 const clearBtn = document.querySelector(".clear")
+const deleteBtn = document.querySelector(".delete")
 
 
 
@@ -73,6 +74,15 @@ shouldResetDisplay = false
 updateDisplay("0")
 
 }
+function deleteNum(){
+    if(display.value.length > 1){
+        const result =  display.value.slice(0,-1)
+       return  updateDisplay(result)
+    }
+    else return
+} 
+
+deleteBtn.addEventListener("click", deleteNum)
 
 clearBtn.addEventListener('click', clearDisplay)
 
